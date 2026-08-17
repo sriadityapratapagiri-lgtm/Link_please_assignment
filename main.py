@@ -13,10 +13,10 @@ load_dotenv()
 app = FastAPI()
 
 # Initialize Redis connection
-redis_client = redis.Redis.from_url(os.getenv("REDIS_URL", "redis://localhost:6379/0"))
+redis_client = redis.Redis.from_url(os.getenv("REDIS_URL", "redis://red-da1gm815efls73egkm30:6379"))
 API_KEY = os.getenv("API_KEY", "").strip()
 def get_db_connection():
-    return psycopg2.connect(os.getenv("DATABASE_URL"))
+    return psycopg2.connect(os.getenv("postgresql://linkplease_342l_user:zrTzW13d1gvwj44tm8WMw4JiDaVwrqgU@dpg-da1gktpt0dsc73br7hug-a/linkplease_342l"))
 
 @app.post("/webhook")
 async def handle_webhook(
