@@ -3,3 +3,4 @@ uvicorn==0.30.6
 redis==5.0.8
 psycopg2-binary
 requests==2.32.3
+python-dotenv==1.0.1
